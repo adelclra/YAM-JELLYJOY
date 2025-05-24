@@ -25,7 +25,7 @@ require '../fungsi/ambil_dataOders.php';
         </ul>
         <ul class="side-menu">
             <li>
-                <a href="../index.php" class="logout">
+                <a href="../logout.php" class="logout">
                     <i class='bx bx-log-out-circle'></i>
                     Log out
                 </a>
