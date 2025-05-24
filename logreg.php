@@ -106,6 +106,7 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>YAM JELLYJOY - log in or sign up</title>
 </head>
@@ -128,7 +129,7 @@ $conn->close();
                     <p class="social-text">Follow us on social media!</p>
                     <div class="social-media">
                         <a href="https://www.instagram.com/yam.jellyjoy?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="social-icon">
-                            <i class="fab fa-instagram"></i>
+                            <i class="ri-instagram-fill"></i>
                         </a>
                     </div>
                 </form>

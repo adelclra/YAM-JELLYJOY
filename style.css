@@ -1,16 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
 :root {
-  --first-color: #EBB9D4;
+  --first-color: #ebb9d4;
   --first-color-alt: #ffa8e5;
-  --title-color: #402B3A;
+  --title-color: #402b3a;
   --text-color: #fdfbfd;
   --text-color-light: #dbdbdb;
   --body-color: #8d6583;
-  --container-color: #E59BE9;
-  --dark-grey: #AAAAAA;
-  --danger: #D32F2F;
-  --warning: #FBC02D;
+  --container-color: #e59be9;
+  --dark-grey: #aaaaaa;
+  --danger: #d32f2f;
+  --warning: #fbc02d;
   --light-warning: #b0a78c;
   --success: #cae4cb;
 }
@@ -186,7 +186,7 @@ form.sign-in-form {
   top: -10%;
   right: 48%;
   transform: translateY(-50%);
-  background-image: linear-gradient(-45deg, #402B3A 0%, #8d6583 100%);
+  background-image: linear-gradient(-45deg, #402b3a 0%, #8d6583 100%);
   transition: 1.8s ease-in-out;
   border-radius: 50%;
   z-index: 6;
@@ -220,7 +220,7 @@ form.sign-in-form {
 
 .right-panel {
   pointer-events: none;
-  padding: 1rem 12% 2rem 17%
+  padding: 1rem 12% 2rem 17%;
 }
 
 .panel .content {
@@ -411,7 +411,6 @@ form.sign-in-form {
     top: 5%;
     transform: translate(-50%, 0);
   }
-
 }
 
 @media (max-width: 570px) {
@@ -440,8 +439,8 @@ form.sign-in-form {
   }
 }
 
-
-.alert-danger, .alert-success {
+.alert-danger,
+.alert-success {
   padding: 15px;
   margin: 10px 0;
   border-radius: 5px;

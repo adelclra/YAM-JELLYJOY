@@ -8,10 +8,12 @@ require 'fungsi/insert_data.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YAM JELLY JOY</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="user/styles.css">
 </head>
 <body>
     <div class="container">
+        <a href="index.php" class="back-button"><i class="ri-arrow-left-line"></i></a>
         <h1 class="moving-text">Order Now!</h1>
         <img src="user/produk.png" alt="produk">
         <table>

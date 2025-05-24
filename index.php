@@ -22,11 +22,11 @@ require 'fungsi/ambil_dataOders.php';
     <body>
         <!--==================== HEADER ====================-->
         <header class="header" id="header">
-            <nav class="nav container">
-                <a href="#" class="nav__logo">
-                    <img src="landing page\img\logo yamjellyjoy.png" alt="logo image">
-                    YAM JELLYJOY
-                </a>
+            <nav class="nav">
+            <a href="#" class="nav__logo">
+                <img src="landing page\img\logo yamjellyjoy.png" alt="logo image">
+                <span class="yam">YAM</span> <span class="jellyjoy">JELLYJOY</span>
+            </a>
 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
@@ -276,12 +276,12 @@ require 'fungsi/ambil_dataOders.php';
 
                         <ul class="footer__links">
                             <li class="footer__information">
-                                Jurusan Teknik Elektro <br>
-                                Unsrat, Manado 
+                                JL. Tonsawang No.16 <br>
+                                Karombasan Selatan, Manado 
                             </li>
 
                             <li class="footer__information">
-                                9AM - 11PM
+                                9AM - 8PM
                             </li>
                         </ul>
                     </div>
@@ -298,12 +298,6 @@ require 'fungsi/ambil_dataOders.php';
                 </div>
                 <img src="landing page/assets/bunga 2.png" alt="footer image" class="footer__bunga">
             </div>
-
-            <div class="footer__info container">
-                <div class="footer__card">
-                    <img src="landing page/assets/footer-card-1.png" alt="footer image">
-                    <img src="landing page/assets/footer-card-2.png" alt="footer image">
-                </div>
 
                 <span class="footer__copy">
                     &copy; YAM JELLYJOY | All rights reserved
