@@ -261,6 +261,16 @@ body.dark-theme {
   cursor: pointer;
 }
 
+.yam {
+  color: #972c70;
+  font-family: "Poppins", sans-serif;
+}
+
+.jellyjoy {
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
 @media screen and (max-width: 767px) {
   .nav__menu {
     position: fixed;
