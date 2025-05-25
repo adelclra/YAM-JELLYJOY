@@ -14,40 +14,44 @@ require 'fungsi/insert_data.php';
 <body>
     <div class="container">
         <a href="index.php" class="back-button"><i class="ri-arrow-left-line"></i></a>
-        <h1 class="moving-text">Order Now!</h1>
-        <img src="user/produk.png" alt="produk">
-        <table>
-            <tr>
-                <td>
-                    <!-- Menambahkan atribut action ke dalam tag <form> -->
-                    <form action="fungsi/insert_data.php" method="post">
-                        <div class="product-details">
-                            <h2 class="product-title">Jelly Ball Soup</h2>
-                            <p class="product-description">Indulge in the exquisite taste of our jelly balls, crafted with the finest ingredients to tantalize your taste buds. Perfect for every occasion, our jelly balls are a delightful treat for everyone.</p>
-                            <div class="price">
-                                <h3 class="product-price">Rp. 15.000</h3>
-                            </div>
-                        </div>
+        <div class="main-content">
+            <div class="left-section">
+                <h1 class="moving-text">Order Now!</h1>
 
-                        <label for="quantity">Quantity:</label>
-                        <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
-                        
-                        <!-- New fields -->
-                        <label for="customer_name">Customer Name:</label>
-                        <input type="text" id="customer_name" name="customer_name">
-                        
-                        
-                        <label for="address">Address:</label>
-                        <textarea id="address" name="address"></textarea>
-                        
-                        <label for="phone_number">Phone Number:</label>
-                        <input type="tel" id="phone_number" name="phone_number">
-                        
-                        <button type="submit" name="submit_order">Add to Cart</button>
-                    </form>
-                </td>
-            </tr>
-        </table>
+            </div>
+            
+            <div class="form-section">
+                <table>
+                    <tr>
+                        <td>
+                            <form action="fungsi/insert_data.php" method="post">
+                                <div class="product-details">
+                                    <h2 class="product-title">Jelly Ball Soup</h2>
+                                    <p class="product-description">Indulge in the exquisite taste of our jelly balls, crafted with the finest ingredients to tantalize your taste buds. Perfect for every occasion, our jelly balls are a delightful treat for everyone.</p>
+                                    <div class="price">
+                                        <h3 class="product-price">Rp. 15.000</h3>
+                                    </div>
+                                </div>
+
+                                <label for="quantity">Quantity:</label>
+                                <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
+                                
+                                <label for="customer_name">Customer Name:</label>
+                                <input type="text" id="customer_name" name="customer_name">
+                                
+                                <label for="address">Address:</label>
+                                <textarea id="address" name="address"></textarea>
+                                
+                                <label for="phone_number">Phone Number:</label>
+                                <input type="tel" id="phone_number" name="phone_number">
+                                
+                                <button type="submit" name="submit_order">Add to Cart</button>
+                            </form>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
     </div>
     <footer class="dashboard-footer">
         <p>&copy; YAM JELLY JOY | All rights reserved</p>
