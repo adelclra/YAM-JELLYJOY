@@ -53,11 +53,13 @@ require '../fungsi/ambil_dataOders.php';
         <!-- End of Navbar -->
 
         <main>
-            <!-- moving text -->
-            <h1 class="moving-text">
-                 Dashboard
-            </h1>
-            <!-- moving text -->
+            <!-- Enhanced moving text with container -->
+            <div class="moving-text-container">
+                <h1 class="moving-text">
+                    Dashboard
+                </h1>
+            </div>
+            <!-- End of enhanced moving text -->
 
             <div class="bottom-data">
             <div class="orders">
@@ -91,56 +93,90 @@ require '../fungsi/ambil_dataOders.php';
         </table>
     </div>
 
-
-
-                <div class="orders">
+                <div class="orders details-orders">
     <div class="orders__header">
         <i class='bx bx-receipt'></i>
         <h3>Details Orders</h3>
         <i class='bx bx-filter'></i>
         <i class='bx bx-search'></i>
     </div>
-    <table>
-        <thead>
-            <tr>
-                <th>User</th>
-                <th>Order Date</th>
-                <th>Status</th>
-                <th>Quantity</th>
-                <th>Address</th>
-                <th>Phone Number</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-            foreach ($orders as $order):
-                $customer_name = htmlspecialchars($order['customer_name']);
-                $order_date = htmlspecialchars($order['order_date']);
-                $status = htmlspecialchars($order['status']);
-                $quantity = htmlspecialchars($order['quantity']);
-                $address = htmlspecialchars($order['address']);
-                $phone_number = htmlspecialchars($order['phone_number']);
-                $id = htmlspecialchars($order['id']);
-            ?>
-            <tr>
-                <td><p><?php echo $customer_name; ?></p></td>
-                <td><?php echo $order_date; ?></td>
-                <td><span class="status <?php echo strtolower($status); ?>"><?php echo $status; ?></span></td>
-                <td><?php echo $quantity; ?></td>
-                <td><?php echo $address; ?></td>
-                <td><?php echo $phone_number; ?></td>
-                <td>
-                    <a href="../fungsi/edit_order.php?id=<?php echo $id; ?>" class="tombol button-edit">EDIT |</a>
-                    <a href="../fungsi/delete_order.php?id=<?php echo $id; ?>" class="tombol button-delete">DELETE</a>
-                </td>
-            </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Qty</th>
+                    <th>Payment</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                foreach ($orders as $order):
+                    $customer_name = htmlspecialchars($order['customer_name']);
+                    $order_date = htmlspecialchars($order['order_date']);
+                    $status = htmlspecialchars($order['status']);
+                    $quantity = htmlspecialchars($order['quantity']);
+                    $address = htmlspecialchars($order['address']);
+                    $phone_number = htmlspecialchars($order['phone_number']);
+                    $payment_method = isset($order['payment_method']) ? htmlspecialchars($order['payment_method']) : 'COD';
+                    $id = htmlspecialchars($order['id']);
+                ?>
+                <tr>
+                    <td>
+                        <div class="user-info">
+                            <p><?php echo $customer_name; ?></p>
+                        </div>
+                    </td>
+                    <td><?php echo date('d/m/Y', strtotime($order_date)); ?></td>
+                    <td><span class="status <?php echo strtolower($status); ?>"><?php echo $status; ?></span></td>
+                    <td><span class="quantity-badge"><?php echo $quantity; ?></span></td>
+                    <td>
+                        <div class="payment-method">
+                            <?php if ($payment_method === 'DANA'): ?>
+                                <span class="payment-badge dana">
+                                    <i class='bx bx-wallet'></i>
+                                    DANA
+                                </span>
+                            <?php else: ?>
+                                <span class="payment-badge cod">
+                                    <i class='bx bx-money'></i>
+                                    COD
+                                </span>
+                            <?php endif; ?>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="address-cell" title="<?php echo $address; ?>">
+                            <?php echo strlen($address) > 30 ? substr($address, 0, 30) . '...' : $address; ?>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="phone-cell">
+                            <i class='bx bx-phone'></i>
+                            <?php echo $phone_number; ?>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="action-buttons">
+                            <a href="../fungsi/edit_order.php?id=<?php echo $id; ?>" class="btn btn-edit" title="Edit Order">
+                                <i class='bx bx-edit'></i>
+                            </a>
+                            <a href="../fungsi/delete_order.php?id=<?php echo $id; ?>" class="btn btn-delete" title="Delete Order" onclick="return confirm('Are you sure you want to delete this order?')">
+                                <i class='bx bx-trash'></i>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
 </div>
-
-
 
             </div>
 
