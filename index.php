@@ -137,7 +137,7 @@ require 'fungsi/ambil_dataOders.php';
             <div class="team__member box">
                 <img src="landing page/assets/angii.jpg" alt="Team Member 4" class="team__photo">
                 <p class="team__name">Anggraini Sumarno</p>
-                <p class="team__nim">220211060600</p>
+                <p class="team__nim">220211060145</p>
         </div>
     </div>
 </section>
