@@ -51,7 +51,7 @@ require 'fungsi/ambil_dataOders.php';
                         </li>
 
                     </ul>
-                   </li> <!-- Close button -->
+                   </li> 
                     <div class="nav__close" id="nav-close">
                         <i class="ri-close-line"></i>
                     </div>
