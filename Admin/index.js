@@ -60,32 +60,3 @@ toggler.addEventListener("change", function () {
     document.body.classList.remove("dark");
   }
 });
-
-// Enhanced moving text interactions
-document.addEventListener("DOMContentLoaded", function () {
-  const movingText = document.querySelector(".moving-text");
-
-  if (movingText) {
-    // Add click effect
-    movingText.addEventListener("click", function () {
-      this.style.animation = "none";
-      setTimeout(() => {
-        this.style.animation =
-          "moveText 1.2s infinite, gradientShift 3s ease-in-out infinite";
-      }, 100);
-
-      setTimeout(() => {
-        this.style.animation = "gradientShift 6s ease-in-out infinite";
-      }, 1200);
-    });
-
-    // Add mouse enter/leave effects
-    movingText.addEventListener("mouseenter", function () {
-      this.style.transform = "scale(1.05) translateY(-5px)";
-    });
-
-    movingText.addEventListener("mouseleave", function () {
-      this.style.transform = "scale(1) translateY(0)";
-    });
-  }
-});

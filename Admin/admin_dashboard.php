@@ -54,7 +54,7 @@ require '../fungsi/ambil_dataOders.php';
         <!-- End of Navbar -->
 
         <main>
-            <!-- Enhanced moving text with perfect centering -->
+            <!-- Enhanced moving text with container -->
             <div class="moving-text-container">
                 <h1 class="moving-text">Dashboard</h1>
             </div>
@@ -178,7 +178,7 @@ require '../fungsi/ambil_dataOders.php';
         </main>
     </div>
 
-    <script src="index_centered.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
